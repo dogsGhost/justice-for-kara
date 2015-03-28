@@ -1,0 +1,42 @@
+.narrative {
+  padding: 1em 0 2em;
+  border-bottom: 1px solid $grey-med;
+
+  h2 {
+    border-bottom: 1px solid $grey-med;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto .5em;
+    height: auto;
+    max-width: 100%;
+
+    @include respond-to($small) {
+      padding: 1px;
+      border: 1px solid $grey-med;
+    }
+  }
+
+  p img {
+    width: 320px;
+
+    @include respond-to($small) {
+      float: right;
+      margin-left: .5em;
+    }
+  }
+}
+
+.js-storySection {
+  position: relative;
+  padding: 1.5em 0 .5em;
+}
+
+.sectionNum {
+  position: absolute;
+  top: .25em;
+  font-size: 80%;
+  font-family: $sans-serif;
+  color: $grey-med;
+}

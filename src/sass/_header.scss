@@ -1,0 +1,27 @@
+.header {
+  padding: .5em 0 .75em;
+  margin: 0 0 1em;
+  background: $black;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    padding: 0;
+    font-size: 1.75em;
+    line-height: 1.2;
+
+    @include respond-to($med) {
+      font-size: 2em;
+    }
+  }
+
+  img {
+    border: 3px double $grey;
+    width: auto;
+    height: 200px;
+
+    @include respond-to($med) {
+      height: 250px;
+    }
+  }
+}

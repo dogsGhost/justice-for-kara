@@ -1,0 +1,53 @@
+.pag-nav {
+  font-family: $sans-serif;
+  text-align: center;
+  font-size: 16px;
+
+  input {
+    margin: 0 7px 4px 0;
+    display: block;
+    width: 4.5em;
+    color: #fff;
+    line-height: 2em;
+    background: $green;
+    border: 0;
+    border-radius: 0;
+    transition: .2s background-color linear;
+
+    &:focus {
+      outline: 0;
+    }
+  
+    &[disabled] {
+
+      &,
+      &:hover {
+        background: #bbb;      
+      }
+    }
+
+    @include respond-to($x-small) {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pag-btnGroup {
+  display: inline-block;
+}
+
+.pag-text {
+  margin-right: 7px;
+  display: inline-block;
+  color: $grey;
+}
+
+/* any css related to pagination goes here */
+.js-storySection {
+  display:none;
+}
+
+.js-currentchapter {
+  display:block;
+}
