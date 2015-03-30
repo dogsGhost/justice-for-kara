@@ -1,0 +1,56 @@
+- var title = 'Justice for Kara Wilhelm';
+- var headerImages = ['snow', 'portrait', 'frame'];
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='css/style.css')
+  body
+    header#page-header.header
+      .pageWrapper
+        each val, index in headerImages
+          - var src = 'img/kara-' + val + '.jpg';
+          img.header-img(alt='', class='header-img--' + (index + 1), src= src)
+
+        h1= title
+
+        nav#page-nav.nav
+          ul
+            li: a(href='#narrative') Kara's Story
+            li: a(href='#contact') Contact Us
+
+    .pageWrapper
+      .intro
+        include ./../../content/intro.html
+      
+      #narrative.narrative
+        h2 Kara's Story
+        #story
+          .js-storySection
+            include ./../../content/01.html
+
+          .js-storySection
+            include ./../../content/02.html
+
+          .js-storySection
+            include ./../../content/03.html
+
+          .js-storySection
+            include ./../../content/04.html
+
+          .js-storySection
+            include ./../../content/05.html
+
+          .js-storySection
+            include ./../../content/06.html
+
+          .js-storySection
+            include ./../../content/07.html
+
+      #contact.afterword
+        h2 Contact Us
+        include ./../../content/afterword.html
+    
+    script(src='js/bundle.js')

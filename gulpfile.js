@@ -12,6 +12,8 @@ var gutil       = require('gulp-util');
 var connect     = require('gulp-connect-php');
 var browserSync = require('browser-sync');
 
+var jade = require('gulp-jade');
+
 // Browsers we want to support with css prefixes.
 var prefixBrowsers = [
     'last 2 versions',
@@ -41,7 +43,7 @@ function bundle() {
       // .pipe(buffer())
       // .pipe(sourcemaps.init({ loadMaps: true }))
       // .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./js'));
+    .pipe(gulp.dest('./public/js'));
 }
 
 // Compile sass files, add css prefixes with sourcemap.
@@ -49,7 +51,7 @@ gulp.task('sass', function () {
     return sass('src/sass/', { style: 'compact', precision: 3 })
         .on('error', function (err) { console.error('Error!', err.message); })
         .pipe(prefix({ browsers: prefixBrowsers }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('watch', function() {
@@ -67,4 +69,15 @@ gulp.task('connect', function() {
   gulp.watch(['*.php', 'js/bundle.js', 'css/style.css']).on('change', function () {
     browserSync.reload();
   });
+});
+
+gulp.task('html', function() {
+  var YOUR_LOCALS = {};
+ 
+  gulp.src('./src/jade/*.jade')
+    .pipe(jade({
+      // pretty: true,
+      locals: YOUR_LOCALS
+    }))
+    .pipe(gulp.dest('./public'))
 });
