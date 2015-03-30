@@ -14,14 +14,23 @@
       font-size: 2em;
     }
   }
+}
 
-  img {
-    border: 3px double $grey;
-    width: auto;
-    height: 200px;
+.header-img {
+  border: 3px double $grey;
+  width: auto;
+  height: 200px;
 
-    @include respond-to($med) {
-      height: 250px;
+  &--1,
+  &--3 {
+    display: none;
+
+    @include respond-to($small) {
+      display: inline;
     }
+  }
+
+  @include respond-to($med) {
+    height: 250px;
   }
 }
