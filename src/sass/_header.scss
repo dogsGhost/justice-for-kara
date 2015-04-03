@@ -16,7 +16,11 @@
   }
 }
 
-.header-img {
+.header-img,
+.narrative .header-img {
+  display: inline;
+  margin: 0;
+  max-width: auto;
   border: 3px double $grey;
   width: auto;
   height: 200px;
@@ -31,6 +35,10 @@
   }
 
   @include respond-to($med) {
-    height: 250px;
+    height: 280px;
   }
+}
+
+.narrative .header-img {
+  border: 1px solid $grey-med;
 }

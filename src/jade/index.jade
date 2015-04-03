@@ -1,5 +1,6 @@
 - var title = 'Justice for Kara Wilhelm';
 - var headerImages = ['snow', 'portrait', 'frame'];
+- var lastImages = ['1', '2', '3'];
 doctype html
 html(lang="en")
   head
@@ -12,7 +13,9 @@ html(lang="en")
       .pageWrapper
         each val, index in headerImages
           - var src = 'img/kara-' + val + '.jpg';
-          img.header-img(alt='', class='header-img--' + (index + 1), src= src)
+          img.image-set(alt='', class='image-set--' + (index + 1), src= src)
+          if index < 2
+            span &nbsp;
 
         h1= title
 
@@ -48,9 +51,14 @@ html(lang="en")
 
           .js-storySection
             include ./../../content/07.html
+            each val, index in lastImages
+              - var src = 'img/kara-' + val + '.jpg';
+              img.image-set(alt='', class='image-set--' + (index + 1), src= src)
+              if index < 2
+                span &nbsp;            
 
       #contact.afterword
         h2 Contact Us
         include ./../../content/afterword.html
     
-    script(src='js/bundle.js')
+    script(src='js/main.js')
