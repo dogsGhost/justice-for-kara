@@ -65,8 +65,11 @@ $admin = $PageData->getAdmin();
       <div class="js-storySection">
         <?php include 'content/06.html'; ?>
       </div>  
-      <div class="js-storySection">
+      <div class="js-storySection section7">
         <?php include 'content/07.html'; ?>
+        <img class="header-img header-img--1" src="img/kara-1.jpg" alt="">
+        <img class="header-img header-img--2" src="img/kara-2.jpg" alt="">
+        <img class="header-img header-img--3" src="img/kara-3.jpg" alt="">        
       </div>
     </div>
   </div>
