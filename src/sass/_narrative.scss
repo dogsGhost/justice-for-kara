@@ -40,3 +40,11 @@
   font-family: $sans-serif;
   color: $grey-med;
 }
+
+#familyPhoto {
+
+  @include respond-to($small) {
+    padding: 0;
+    border-width: 0;
+  }
+}
