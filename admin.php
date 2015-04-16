@@ -1,16 +1,16 @@
 <?php
-$acknowledgment = "<p>&nbsp;</p>";
+// $acknowledgment = "<p>&nbsp;</p>";
 
-if (isset($_POST['submit'])){
-  if ($_POST['login']==='8wilhelm5'){
-    session_start();
-    $_SESSION['admin'] = "authorized";
-    header('Location: index.php');
-  }
-  else{
-    $acknowledgment = "<p class='error'>Incorrect Login</p>";
-  }
-}
+// if (isset($_POST['submit'])){
+//   if ($_POST['login']==='8wilhelm5'){
+//     session_start();
+//     $_SESSION['admin'] = "authorized";
+//     header('Location: index.php');
+//   }
+//   else{
+//     $acknowledgment = "<p class='error'>Incorrect Login</p>";
+//   }
+// }
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
   <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-  <div class="pageWrapper">
+  <!-- <div class="pageWrapper">
     <?php echo $acknowledgment; ?>
     <form method="post" action="admin.php" id="admin">
       <div>
@@ -31,6 +31,6 @@ if (isset($_POST['submit'])){
         <p><input type="submit" name="submit" value="Login"/></p>
       </div>
     </form>
-</div>
+</div> -->
   </body>
 </html>

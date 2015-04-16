@@ -1,13 +1,13 @@
 <?php
-require_once('PageData.php');
-$PageData = new PageData();
-$admin = false;
+// require_once('PageData.php');
+// $PageData = new PageData();
+$admin = true;
 
-$content = "home";
+// $content = "home";
 
-$PageData->pageSetup();
+// $PageData->pageSetup();
 
-$admin = $PageData->getAdmin();
+// $admin = $PageData->getAdmin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ $admin = $PageData->getAdmin();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php if ($admin) : ?>
+
 <header id="page-header" class="header">
   <div class="pageWrapper">
     <img class="header-img header-img--1" src="img/kara-snow.jpg" alt="">
@@ -78,9 +78,15 @@ $admin = $PageData->getAdmin();
   </div>
 </div>
 <script src="js/bundle.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<?php else :
-echo 'Site coming soon.';
-endif; ?>
+  ga('create', 'UA-61911549-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
