@@ -10,13 +10,14 @@ $admin = true;
 // $admin = $PageData->getAdmin();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="This narrative is written primarily to bring justice for Kara Wilhelm, who lost her life in a manner that, to this day, has yet to be resolved.">
   <title>Justice for Kara Wilhelm</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/modernizr.min.js"></script>
 </head>
 <body>
 
